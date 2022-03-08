@@ -8,6 +8,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import sample.views.Loteria;
+import sample.views.Parseador;
 
 import java.io.IOException;
 
@@ -29,9 +30,9 @@ public class Main extends Application {
 
 
         mitLoteria = new MenuItem("Loteria ");
-        mitLoteria.setOnAction(event ->EventoLoreia(1));
+        mitLoteria.setOnAction(event ->EventoLoteria(1));
         mitParseador = new MenuItem("Codigo Morse");
-        mitParseador.setOnAction(event -> EventoLoreia(2));
+        mitParseador.setOnAction(event -> EventoLoteria(2));
 
         menuCompetencia1.getItems().addAll(mitLoteria,mitParseador);
 
@@ -43,10 +44,10 @@ public class Main extends Application {
 
     }
 
-    private void EventoLoreia(int i ) {
+    private void EventoLoteria(int i ) {
         switch (i){
             case 1: new Loteria(); break;
-            //case 2: new Parseador();break;
+            case 2: new Parseador();break;
         }
     }
 
